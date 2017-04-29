@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import {withRouter} from 'react-router-dom';
 import * as Actions from '../actions';
 import ResultsView from './ResultsView';
 import DATA from '../data/index.json';
@@ -17,4 +18,6 @@ const mapDispatchtoProps = dispatch => {
   return {actions: bindActionCreators(Actions, dispatch)};
 };
 
-export default connect(mapStatetoProps, mapDispatchtoProps)(ResultsView);
+export default withRouter(
+  connect(mapStatetoProps, mapDispatchtoProps)(ResultsView)
+);

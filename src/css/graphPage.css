@@ -1,0 +1,24 @@
+.graphPage {
+  padding: 0em 4em;
+  display: grid;
+  grid-template-columns: 1fr 10px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "controls . info"
+}
+
+.controls {
+  grid-area: controls;
+  background-color: #dcd9d9;
+  border-radius: 5px;
+}
+
+.info {
+  grid-area: info;
+  background-color: #dcd9d9;
+  border-radius: 5px;
+}
+
+.svgBin {
+  margin: 3em;
+}

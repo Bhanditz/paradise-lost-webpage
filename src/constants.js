@@ -29,3 +29,9 @@ export const GRAPHS = [
   {displayName: 'Persistence', selector: 'persistence'},
   {displayName: 'Matrix', selector: 'matrix'},
 ];
+
+export const PAGES = [
+  {displayName: 'Introduction', selector: 'introduction'},
+  {displayName: 'Graphs', selector: 'graphs'},
+  {displayName: 'Conclusions', selector: 'conclusions'},
+];

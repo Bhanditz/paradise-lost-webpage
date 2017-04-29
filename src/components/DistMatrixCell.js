@@ -1,8 +1,8 @@
 import React from 'react';
-import {interpolateGreens} from 'd3-scale-chromatic';
+import {interpolateBlues} from 'd3-scale-chromatic';
 
 const colorScale = (data, scales) =>
-  interpolateGreens(scales.colorNum(data.dist));
+  interpolateBlues(scales.colorNum(data.dist));
 
 function DistMatrixCell({scales, data, styles}) {
   const xStep = Math.abs(scales.x(1) - scales.x(0));

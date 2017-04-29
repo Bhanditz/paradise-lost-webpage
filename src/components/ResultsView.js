@@ -4,10 +4,11 @@ import NavBar from './NavBar';
 import BarCode from './BarCode';
 import PersDiagram from './PersDiagram';
 import DistMatrix from './DistMatrix';
+import '../css/graphPage.css';
 
 const graphStyles = {
-  width: 300,
-  height: 300,
+  width: 400,
+  height: 400,
   margin: {
     sides: 20,
     top: 10,
@@ -68,13 +69,20 @@ const renderNavBar = (identifier, data, fcn) => {
 function ResultsView({sampler, metric, data, graph, actions}) {
   const updateView = actions.updateView;
   return (
-    <div>
-      {renderNavBar('Sample', sampler, updateView)}
-      {renderNavBar('Metric', metric, updateView)}
-      {renderNavBar('Graph', graph, updateView)}
-      <svg width={graphStyles.width} height={graphStyles.height}>
-        {renderMetricGraph(graph, data, graphStyles)}
-      </svg>
+    <div className={'graphPage'}>
+      <div className={'controls'}>
+        {renderNavBar('Sample', sampler, updateView)}
+        {renderNavBar('Metric', metric, updateView)}
+        {renderNavBar('Graph', graph, updateView)}
+        <div className={'svgBin'}>
+          <svg width={graphStyles.width} height={graphStyles.height}>
+            {renderMetricGraph(graph, data, graphStyles)}
+          </svg>
+        </div>
+      </div>
+      <div className={'info'}>
+        text
+      </div>
     </div>
   );
 }
