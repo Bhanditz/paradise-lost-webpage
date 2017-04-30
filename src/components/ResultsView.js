@@ -1,9 +1,10 @@
 import React from 'react';
-import {GRAPHS, SAMPLERS, METRICS} from '../constants';
+import {GRAPHS, SAMPLERS, METRICS, EXPLAIN} from '../constants';
 import NavBar from './NavBar';
 import BarCode from './BarCode';
 import PersDiagram from './PersDiagram';
 import DistMatrix from './DistMatrix';
+import InfoBin from './InfoBin';
 import '../css/graphPage.css';
 
 const graphStyles = {
@@ -66,7 +67,7 @@ const renderNavBar = (identifier, data, fcn) => {
   }
 };
 
-function ResultsView({sampler, metric, data, graph, actions}) {
+function ResultsView({sampler, metric, data, graph, explain, actions}) {
   const updateView = actions.updateView;
   return (
     <div className={'graphPage'}>
@@ -81,7 +82,23 @@ function ResultsView({sampler, metric, data, graph, actions}) {
         </div>
       </div>
       <div className={'info'}>
-        text
+        <InfoBin
+          content={EXPLAIN.samplers[sampler]}
+          header={'How are we sampling?'}
+        />
+        <InfoBin
+          content={EXPLAIN.metrics[metric]}
+          header={'What is our metric?'}
+        />
+        <InfoBin
+          content={EXPLAIN.graphs[graph]}
+          header={'What does the graph show?'}
+        />
+        {/* TODO put in selectors for analysis */}
+        <InfoBin
+          content={'Currently? Nothing!'}
+          header={'What do we observe?'}
+        />
       </div>
     </div>
   );

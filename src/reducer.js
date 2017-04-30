@@ -3,6 +3,10 @@ const initialState = {
   sampler: 'weightedSample',
   metric: 'editDistance',
   graph: 'matrix',
+  explain: {
+    sampler: 'Sample randomly, with each stanza weighted appropriately',
+    metric: 'Edit distance, letter by letter',
+  },
 };
 
 export default function(state = initialState, action) {

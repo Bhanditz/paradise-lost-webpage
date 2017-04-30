@@ -2,6 +2,11 @@ import React from 'react';
 import {extent} from 'd3-array';
 import {scaleLinear} from 'd3-scale';
 import DistMatrixCell from './DistMatrixCell';
+// import ColorAxis from './ColorAxis';
+
+// const barStyles = {
+//   barWidth: 40,
+// };
 
 const getScales = (data, styles) => {
   let min, max;
@@ -35,6 +40,7 @@ function DistMatrix({data, styles}) {
   return (
     <g>
       {data.map((d, i) => renderCell(scales, d, cellStyles, i))}
+      {/*  <ColorAxis styles={cellStyles} /> */}
     </g>
   );
 }

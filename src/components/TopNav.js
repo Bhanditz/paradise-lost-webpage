@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import NavButton from './NavButton';
 
 const TopNavWrapper = styled.div`
-  margin: 1em 0em;
+  margin: 4em;
 `;
 
 const renderLink = (item, index, current) => {

@@ -12,9 +12,18 @@ const BarCodeStyles = {
 const backgroundRect = styles => ({
   x: 0,
   y: 0,
-  width: styles.width - styles.margin.sides,
+  width: styles.width,
   height: styles.height,
   fill: 'rgb(211, 220, 234)',
+});
+
+const infinityLine = styles => ({
+  x1: styles.width - styles.margin.sides,
+  y1: styles.height - styles.margin.top,
+  x2: styles.width - styles.margin.sides,
+  y2: styles.margin.bottom,
+  strokeWidth: 1,
+  stroke: 'black',
 });
 
 const lifeExtent = data => {
@@ -53,6 +62,7 @@ function BarCode({data, styles}) {
   return (
     <g>
       <rect {...backgroundRect(styles)} />
+      <line {...infinityLine(styles)} />
       <Axis
         {...axisPropsFromTickScale(scales.x, 10)}
         style={{orient: BOTTOM}}

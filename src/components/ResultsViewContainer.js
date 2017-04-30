@@ -11,6 +11,7 @@ const mapStatetoProps = state => {
     sampler: state.sampler,
     metric: state.metric,
     graph: state.graph,
+    explain: state.explain,
   };
 };
 
