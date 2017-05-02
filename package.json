@@ -2,6 +2,7 @@
   "name": "paradise-lost-webpage",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://trainorpj.github.io/paradise-lost-webpage",
   "dependencies": {
     "axios": "^0.16.1",
     "d3-array": "^1.2.0",

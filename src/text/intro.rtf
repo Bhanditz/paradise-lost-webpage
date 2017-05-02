@@ -1,0 +1,18 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Topological Data Analysis (TDA) provides powerful tools for exploring and characterizing high-dimensional data.  Natural Language Processing (NLP) incorporates statistical methods and linguistic analysis to turn written (and spoken) documents into datasets.  In this project, we seek to wed the two, using methods in NLP to construct a dataset, and then leveraging TDA to characterize that dataset.  \
+\
+We shall explore <I>Paradise Lost</I> (1867), John Milton\'92s legendary poem, telling the story of The Fall of Man.  The poem is of substantial linguistic importance, acting as a seminal work in the canon of English language and literature.  Of course, like all epic poems, <I>Paradise Lost</I> is tremendous in length and content.  It is so long, that I could not feasibly process it in its entirety, so I turned to sampling.\
+\
+I chose to break the poem up into stanzas, figuring that taking chapters would be too broad and individual lines too granular.  TDA works by comparing the \'93distance\'94 between pairs of points in one\'92s dataset, where \'93distance\'94 is determined by any metric on that space.  NLP has many metrics, several of which we will impose on our datasets.  If I were to used the whole dataset, I would have to find distances between every single pair of stanzas, which comes out to an very large number.  Thus, sampling is necessary.\
+\
+In the context of TDA, sampling raises some interesting question.  Like always, we hope that a sample is representative of the underlying population, but in topology, it brings into play the notions of homeomorphism and simplicial maps.  In other words, could one characterize the maps between samples to derive more topological properties of the space?  I shall explore this qualitatively in the upcoming analysis, although it hints at an areas of research in TDA.\
+\
+Could the same be said about different metrics?  Could we infer topological properties when comparing two complexes formed under different metrics?  While one would hope different sampling techniques would not change our results drastically, that\'92s not a reasonable expectation for different metrics.  This project will also compare how our results differ between metrics.\
+\
+Ultimately, this analysis will consist of several smaller analyses.  With two sampling techniques, and three metrics put on each sample, there\'92s a decent amount of ground to cover (note that one sampler/metric pair was too unusable for storage reasons).  Each analysis will have a Barcode Diagram, a commonly used graph in TDA.  However, there will not be any Persistence Diagrams, as all the cycles in these datasets were born at the same time (an interesting property).  Instead, various interpretations of the distribution of the dataset are provided, which, when coupled with the Barcode diagram, will shed some light on what form the data takes. }

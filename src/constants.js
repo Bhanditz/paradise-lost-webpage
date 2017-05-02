@@ -35,6 +35,7 @@ export const PAGES = [
   {displayName: 'Introduction', selector: 'introduction'},
   {displayName: 'Graphs', selector: 'graphs'},
   {displayName: 'Conclusions', selector: 'conclusions'},
+  {displayName: 'About', selector: 'about'},
 ];
 
 export const EXPLAIN = {
@@ -45,10 +46,10 @@ export const EXPLAIN = {
   metrics: {
     editDistance: `Also known as the "edit distance," the Levenshtein metric determines the difference in letters between two stanzas.  Basically, between two stanzas, we ask how each character (including spaces) differ; 0 if they're the same, 1 if they're different.\nThis metric finds use in spellcheck software, as misspellings should have relatively small "edit distances."`,
     jaccardDistance: `How might one measure word usage?  The Jaccard Distance, which has applications far beyond NLP, gives an idea of how stanzas differ by their word content.\nFor two stanzas, count the words that appear in either one (don't double-count words).  Then count the words that appear in both stanzas.  Divide the second number by the first, and that represents the Jaccard Distance.`,
-    syllableDistance: `How might one measure "rhythm" or "flow" in a stanza?  This metric counts the number of syllables in two stanza, divides each by the number of lines in the stanzas, and subtracts the two averages.  While rudimentary, I treated it as a first-step in creating a phoentically-based metric.`,
+    syllableDistance: `How might one measure "rhythm" or "flow" in a stanza?  This metric counts the number of syllables in two stanza, divides each by the number of lines in the stanzas, and subtracts the two averages.  While rudimentary, I treated it as a first-step in creating a phonetically-based metric.`,
   },
   graphs: {
-    // persistence: 'This view contains the same information as the Barcode Diagram, but puts it in a different format.  A Persitence Diagram plots the "birth" of topological features against their "death," if they do die off.  As one increases the error threshold, different features are born and die.  The perpendicular distance between each point and the diagonal line indicate the persistence of that feature.',
+    // persistence: 'This view contains the same information as the Barcode Diagram, but puts it in a different format.  A Persistence Diagram plots the "birth" of topological features against their "death," if they do die off.  As one increases the error threshold, different features are born and die.  The perpendicular distance between each point and the diagonal line indicate the persistence of that feature.',
     barcode: 'The standard graph for TDA, the BarCode Diagram shows how different features come and go as one increases the error threshold about the data points.  Each bar corresponds to a topological feature that appeared at the threshold.  Longer bars suggest the existence of a persistent feature, while shorter ones are more likely noise.',
     matrix: 'The matrix representation presents the data in its rawest form, as a distribution of the sampled points under the given metric.  While there are too many points to make sense of the diagram, this view gives some indication of a distribution.\nNote that boxes appear in no particular order, however boxes immediately to the north, south, east, and west of a box are correlated.',
     histogram: `This graph gives an idea of how the distances between stanzas are distributed.  This histogram shows the frequency at which various distances appear.  Note that this reveals no information about the actual distance between stanzas, but it does give us a sense of what a general distribution looks like.`,

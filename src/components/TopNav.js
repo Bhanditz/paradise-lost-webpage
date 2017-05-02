@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import NavButton from './NavButton';
 
 const TopNavWrapper = styled.div`
+  text-align: center;
   margin: 4em;
 `;
 

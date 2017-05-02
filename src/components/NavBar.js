@@ -8,6 +8,7 @@ const NavWrapper = styled.div`
 
   .label {
     width: 20%;
+    text-align: center;
   }
 
 `;
