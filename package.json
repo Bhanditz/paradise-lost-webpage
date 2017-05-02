@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.1",
     "d3-array": "^1.2.0",
     "d3-scale": "^1.0.5",
     "d3-scale-chromatic": "^1.1.1",
+    "express": "^4.15.2",
     "material-ui": "^0.17.4",
+    "morgan": "^1.8.1",
     "react": "^15.5.4",
     "react-d3-axis": "^0.1.1",
     "react-dom": "^15.5.4",

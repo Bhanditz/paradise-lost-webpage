@@ -5,7 +5,7 @@ import {scaleLinear} from 'd3-scale';
 import {min, max} from 'd3-array';
 
 const BarCodeStyles = {
-  strokeWidth: 5,
+  strokeWidth: 1,
   stroke: 'steelblue',
 };
 

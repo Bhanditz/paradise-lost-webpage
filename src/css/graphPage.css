@@ -1,8 +1,9 @@
 .graphPage {
   padding: 0em 4em;
+  margin-bottom: 2em;
   display: grid;
   grid-template-columns: 1fr 10px 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 900px;
   grid-template-areas:
     "controls . info"
 }
@@ -17,6 +18,7 @@
   grid-area: info;
   background-color: #dcd9d9;
   border-radius: 5px;
+  overflow: scroll;
 }
 
 .svgBin {

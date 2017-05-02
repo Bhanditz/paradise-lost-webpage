@@ -52,6 +52,7 @@ function PersDiagram({data, styles}) {
   return (
     <g>
       <rect {...backgroundRect(styles)} />
+      {data.map((d, i) => renderCirc(scales, d, circStyles, i))}
       <Axis
         {...axisPropsFromTickScale(scales.x, 10)}
         style={{orient: BOTTOM}}
@@ -65,7 +66,6 @@ function PersDiagram({data, styles}) {
         stroke={'grey'}
         strokeWidth={1}
       />
-      {data.map((d, i) => renderCirc(scales, d, circStyles, i))}
     </g>
   );
 }

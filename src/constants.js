@@ -15,18 +15,19 @@ export const METRICS = [
     selector: 'editDistance',
   },
   {
-    displayName: 'Jaccard',
-    selector: 'jaccardDistance',
-  },
-  {
     displayName: 'Syllables',
     selector: 'syllableDistance',
+  },
+  {
+    displayName: 'Jaccard',
+    selector: 'jaccardDistance',
   },
 ];
 
 export const GRAPHS = [
   {displayName: 'Barcode', selector: 'barcode'},
-  {displayName: 'Persistence', selector: 'persistence'},
+  // {displayName: 'Persistence', selector: 'persistence'},
+  {displayName: 'Histogram', selector: 'histogram'},
   {displayName: 'Matrix', selector: 'matrix'},
 ];
 
@@ -47,8 +48,9 @@ export const EXPLAIN = {
     syllableDistance: `How might one measure "rhythm" or "flow" in a stanza?  This metric counts the number of syllables in two stanza, divides each by the number of lines in the stanzas, and subtracts the two averages.  While rudimentary, I treated it as a first-step in creating a phoentically-based metric.`,
   },
   graphs: {
-    persistence: 'This view contains the same information as the Barcode Diagram, but puts it in a different format.  A Persitence Diagram plots the "birth" of topological features against their "death," if they do die off.  As one increases the error threshold, different features are born and die.  The perpendicular distance between each point and the diagonal line indicate the persistence of that feature.',
+    // persistence: 'This view contains the same information as the Barcode Diagram, but puts it in a different format.  A Persitence Diagram plots the "birth" of topological features against their "death," if they do die off.  As one increases the error threshold, different features are born and die.  The perpendicular distance between each point and the diagonal line indicate the persistence of that feature.',
     barcode: 'The standard graph for TDA, the BarCode Diagram shows how different features come and go as one increases the error threshold about the data points.  Each bar corresponds to a topological feature that appeared at the threshold.  Longer bars suggest the existence of a persistent feature, while shorter ones are more likely noise.',
     matrix: 'The matrix representation presents the data in its rawest form, as a distribution of the sampled points under the given metric.  While there are too many points to make sense of the diagram, this view gives some indication of a distribution.\nNote that boxes appear in no particular order, however boxes immediately to the north, south, east, and west of a box are correlated.',
+    histogram: `This graph gives an idea of how the distances between stanzas are distributed.  This histogram shows the frequency at which various distances appear.  Note that this reveals no information about the actual distance between stanzas, but it does give us a sense of what a general distribution looks like.`,
   },
 };

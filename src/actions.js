@@ -5,3 +5,9 @@ export const updateView = (selector, option) => {
     option,
   };
 };
+
+export const updateExplain = (selector, bool) => ({
+  type: 'UPDATE_EXPLAIN',
+  selector,
+  status: !bool,
+});
