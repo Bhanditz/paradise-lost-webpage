@@ -37,7 +37,7 @@ const IntroPage = props => {
         {' '}
       </p>
       <p>
-        {`  Ultimately, this analysis will consist of several smaller analyses.  With two sampling techniques, and three metrics put on each sample, there’s a decent amount of ground to cover (note that one sampler/metric pair was too unusable for storage reasons).  Each analysis will have a Barcode Diagram, a commonly used graph in TDA.  However, there will not be any Persistence Diagrams, as all the cycles in these datasets were born at the same time (an interesting property).  Instead, various interpretations of the distribution of the dataset are provided, which, when coupled with the Barcode diagram, will shed some light on what form the data takes.`}
+        {`  Ultimately, this analysis will consist of several smaller analyses.  With two sampling techniques, and three metrics put on each sample, there’s a decent amount of ground to cover (note that one sampler/metric pair was too unusable for storage reasons).  Each analysis will have a Barcode Diagram, a commonly used graph in TDA.  However, there will not be any Persistence Diagrams, as the only homology groups groups captured were the 0th homology (an interesting property).  Instead, various interpretations of the distribution of the dataset are provided, which, when coupled with the Barcode diagram, will shed some light on what form the data takes.`}
         {' '}
       </p>
     </IntroBin>
