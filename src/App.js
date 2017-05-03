@@ -35,6 +35,8 @@ class App extends Component {
 
         <TopNav items={PAGES} current={currentPath} />
 
+        <Route exact path="/" component={IntroPage} />
+
         <Route path="/introduction" component={IntroPage} />
         <Route path="/conclusions" component={ConclusionsPage} />
         <Route path="/graphs" component={ResultsViewContainer} />
