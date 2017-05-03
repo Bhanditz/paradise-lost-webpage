@@ -3,16 +3,10 @@
   margin-bottom: 2em;
   display: flex;
   justify-content: space-between;
-  /*display: grid;
-  grid-template-columns: 1fr 10px 1fr;
-  grid-template-rows: 800px;
-  grid-template-areas:
-    "controls . info"*/
 }
 
 
 .controls {
-  /*grid-area: controls;*/
   background-color: #dcd9d9;
   border-radius: 5px;
   width: 50%;
@@ -20,7 +14,6 @@
 }
 
 .info {
-  /*grid-area: info;*/
   background-color: #dcd9d9;
   border-radius: 5px;
   overflow: scroll;
